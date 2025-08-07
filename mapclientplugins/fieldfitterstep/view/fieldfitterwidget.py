@@ -55,7 +55,7 @@ class FieldFitterWidget(QtWidgets.QMainWindow):
         layout.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         layout.setContentsMargins(0, 0, 0, 0)
 
-        self._identifier_label = QtWidgets.QLabel("Field Fitter Identifier: " + self._model.getIdentifier())
+        self._identifier_label = QtWidgets.QLabel("Identifier: " + self._model.getIdentifier())
         layout.addWidget(self._identifier_label)
 
         self._initial_config_ui = Ui_InitialConfig()
@@ -160,7 +160,7 @@ class FieldFitterWidget(QtWidgets.QMainWindow):
         """
         Update fit widgets to display settings for Fitter.
         """
-        self._identifier_label.setText("Field Fitter Identifier:  " + self._model.getIdentifier())
+        self._identifier_label.setText("Identifier:  " + self._model.getIdentifier())
         self._initial_config_ui.configDataCoordinates_fieldChooser.setField(self._fitter.getDataCoordinatesField())
         self._initial_config_ui.configModelCoordinates_fieldChooser.setField(self._fitter.getModelCoordinatesField())
         self._initial_config_ui.configModelFitGroup_fieldChooser.setField(self._fitter.getModelFitGroup())
